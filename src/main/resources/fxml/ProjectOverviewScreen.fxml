@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.k2124884.Platform.controller.ProjectOverviewController" spacing="20.0" style="-fx-padding: 20;">
+    <children>
+        <VBox spacing="10.0">
+            <children>
+                <Button onAction="#goBack" text="Back to Library" style="-fx-font-size: 12px;"/>
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Project Overview" />
+                <Label fx:id="projectImage" style="-fx-pref-width: 200px; -fx-pref-height: 200px; -fx-background-color: #ddd; -fx-alignment: center; -fx-border-color: #000; -fx-border-width: 1;" text="[Image Placeholder]" />
+            </children>
+        </VBox>
+        <VBox spacing="10.0">
+            <children>
+                <Button onAction="#uploadFile" prefWidth="120.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" text="Upload File" />
+                <TableView fx:id="fileTable" prefHeight="400.0">
+                    <columns>
+                        <TableColumn fx:id="fileNameColumn" text="File" prefWidth="100.0" />
+                        <TableColumn fx:id="extensionNameColumn" text="Extension" prefWidth="80.0" />
+                        <TableColumn fx:id="versionNumberColumn" text="Version" prefWidth="80.0" />
+                        <TableColumn fx:id="lastEditNameColumn" text="Last Edit Name" prefWidth="120.0" />
+                        <TableColumn fx:id="lastEditTimeColumn" text="Time" prefWidth="150.0" />
+                        <TableColumn fx:id="downloadColumn" text="Download" prefWidth="100.0" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</HBox>
